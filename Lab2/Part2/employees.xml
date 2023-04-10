@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="employee.css"?>
+<employees>
+	<employee>
+		<name>Mariam</name>
+		<email>Mariam@gmail.com</email>	
+		<phone>015011586968</phone>
+		<address>92 st el-maks, ElQabry, Alexandria, Egypt</address>
+	</employee>
+	<employee>
+		<name>Mokhtar</name>
+		<email>Mokhtar@gmail.com</email>
+		<phone>015011666968</phone>
+		<address>15 st el-maks, ElQabry, Alexandria, Egypt</address>
+	</employee>
+	<employee>
+		<name>Ghina</name>
+		<email>ghina@gmail.com</email>
+		<phone>01501058268</phone>
+		<address>St. Ahmed Fouad Naseem - Behind the Workforce - Nasr City</address>
+	</employee>
+</employees>
