@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="employee.xsl"?>
+<employees>
+	<employee isbn="1">
+		<name>Mariam Mokhtar</name>
+		<email>Mariam@gmail.com</email>
+		<phones>
+			<phone type="mobile">01201056588</phone>
+		</phones>
+		<addresses>
+			<address>
+				<Street>92 st el maks</Street>
+				<BuildingNumber>92</BuildingNumber>
+				<Region>ElQabry</Region>
+				<City>Alexandria</City>
+				<Country>Eqypt</Country>
+			</address>
+		</addresses>
+	</employee>
+	<employee isbn="2">
+		<name>Yosra Ahmed</name>
+		<email>Yosra@gmail.com</email>
+		<phones>
+			<phone type="mobile">01220144851</phone>
+		</phones>
+		<addresses>
+			<address>
+				<Street>1 st el maks</Street>
+				<BuildingNumber>5</BuildingNumber>
+				<Region>ElQabry</Region>
+				<City>Alexandria</City>
+				<Country>Eqypt</Country>
+			</address>
+		</addresses>
+	</employee>
+	<employee isbn="3">
+		<name>Ghina Amir</name>
+		<email>Ghina@gmail.com</email>
+		<phones>
+			<phone type="mobile">01204451445</phone>
+		</phones>
+		<addresses>
+			<address>
+				<Street>El hosary st</Street>
+				<BuildingNumber>6</BuildingNumber>
+				<Region>Miami</Region>
+				<City>Alexandria</City>
+				<Country>Eqypt</Country>
+			</address>
+		</addresses>
+	</employee>
+</employees>
