@@ -1,0 +1,107 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/css" href="./library.css"?>
+<library>
+    <location>Alexandria</location>
+    <description>Library of Books</description>
+    <librarian>Mariam Mokhtar</librarian>
+    <Books>
+        <book isbn="12">
+            <title>Book1</title>
+            <author>Ghina Amir</author>
+            <preface>Preface of Book</preface>
+            <parts>
+                <part isbn="113">
+                    <title>Part1</title>
+                    <chapters>
+                        <chapter isbn="1134">
+                            <title>Chapter1</title>
+                            <summary>Summary of Chapter1</summary>
+                            <sections>
+                                <section isbn="11341">
+                                    <paragraphs>
+                                        <paragraph isbn="123411">Paragraph1</paragraph>
+                                        <paragraph isbn="123412">Paragraph2</paragraph>
+                                        <paragraph isbn="123413">Paragraph3</paragraph>
+                                    </paragraphs>
+                                </section>
+                                <section isbn="11342">
+                                    <paragraphs>
+                                        <paragraph isbn="113421">Paragraph1</paragraph>
+                                        <paragraph isbn="113422">Paragraph2</paragraph>
+                                        <paragraph isbn="113423">Paragraph3</paragraph>
+                                    </paragraphs>
+                                </section>
+                            </sections>
+                        </chapter>
+                        <chapter isbn="1135">
+                            <title>Chapter2</title>
+                            <summary>Summary of Chapter2</summary>
+                            <sections>
+                                <section isbn="11351">
+                                    <paragraphs>
+                                        <paragraph isbn="113511">Paragraph1</paragraph>
+                                        <paragraph isbn="113512">Paragraph2</paragraph>
+                                        <paragraph isbn="113513">Paragraph3</paragraph>
+                                    </paragraphs>
+                                </section>
+                                <section isbn="12352">
+                                    <paragraphs>
+                                        <paragraph isbn="113521">Paragraph1</paragraph>
+                                        <paragraph isbn="113522">Paragraph2</paragraph>
+                                        <paragraph isbn="113523">Paragraph3</paragraph>
+                                    </paragraphs>
+                                </section>
+                            </sections>
+                        </chapter>
+                    </chapters>
+                </part>
+
+                <part isbn="123">
+                    <title>Part2</title>
+                    <chapters>
+                        <chapter isbn="1234">
+                            <title>Chapter1</title>
+                            <summary>Summary of Chapter1</summary>
+                            <sections>
+                                <section isbn="12341">
+                                    <paragraphs>
+                                        <paragraph isbn="123411">Paragraph1</paragraph>
+                                        <paragraph isbn="123412">Paragraph2</paragraph>
+                                        <paragraph isbn="123413">Paragraph3</paragraph>
+                                    </paragraphs>
+                                </section>
+                                <section isbn="12342">
+                                    <paragraphs>
+                                        <paragraph isbn="123421">Paragraph1</paragraph>
+                                        <paragraph isbn="123422">Paragraph2</paragraph>
+                                        <paragraph isbn="123423">Paragraph3</paragraph>
+                                    </paragraphs>
+                                </section>
+                            </sections>
+                        </chapter>
+                        <chapter isbn="1235">
+                            <title>Chapter2</title>
+                            <summary>Summary of Chapter2</summary>
+                            <sections>
+                                <section isbn="12351">
+                                    <paragraphs>
+                                        <paragraph isbn="123511">Paragraph1</paragraph>
+                                        <paragraph isbn="123512">Paragraph2</paragraph>
+                                        <paragraph isbn="123513">Paragraph3</paragraph>
+                                    </paragraphs>
+                                </section>
+                                <section isbn="12352">
+                                    <paragraphs>
+                                        <paragraph isbn="123521">Paragraph1</paragraph>
+                                        <paragraph isbn="123522">Paragraph2</paragraph>
+                                        <paragraph isbn="123523">Paragraph3</paragraph>
+                                    </paragraphs>
+                                </section>
+                            </sections>
+                        </chapter>
+                    </chapters>
+                </part>
+            </parts>
+        </book>
+    </Books>
+</library> 
