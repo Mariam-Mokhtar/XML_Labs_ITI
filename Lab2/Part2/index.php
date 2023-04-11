@@ -81,7 +81,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 
-$index = $_SESSION["myIndex"];
+$index = $_SESSION["myIndex"]??0;
 $employees = $doc->documentElement;
 $employee = $employees->childNodes[$index];
 $name = $employee->childNodes[1]->nodeValue;  // id @index 0
