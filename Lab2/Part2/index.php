@@ -6,12 +6,19 @@ $doc = new DOMDocument();
 $doc->preserveWhiteSpace = false;
 $doc->loadXML($fileContent);
 
+$clearFlag = false;
+
 $elementsLength = $doc->getElementsByTagName("employee")->length;
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($_POST["action"] === "insert") {
         // Create a new element
         $new_element = $doc->createElement('employee');
+
+        //id
+        $id_element = $doc->createElement('id');
+        $id_element_text = $doc->createTextNode(uniqid());
+        $id_element->appendChild($id_element_text);
 
         //name
         $name_element = $doc->createElement('name');
@@ -33,7 +40,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $address_element_text = $doc->createTextNode($_POST['address']);
         $address_element->appendChild($address_element_text);
 
-        $new_element->append($name_element, $email_element, $phone_element, $address_element);
+        $new_element->append($id_element, $name_element, $email_element, $phone_element, $address_element);
 
         // Insert the new element into the document
         $root = $doc->documentElement;
@@ -43,23 +50,51 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $doc->save($fileName);
     }
     $index = $_SESSION["myIndex"];
-    if ($_POST["action"] === "next" && $index < $elementsLength-1) {
+    if ($_POST["action"] === "next" && $index < $elementsLength - 1) {
         $_SESSION["myIndex"] += 1;
     }
 
     if ($_POST["action"] === "prev" && $index > 0) {
         $_SESSION["myIndex"] -= 1;
     }
+
+    if ($_POST["action"] === "clear") {
+        $clearFlag = true;
+    }
+    if ($_POST["action"] === "delete") {
+        $root = $doc->documentElement;
+        $deleted_element = $root->childNodes[$_SESSION["myIndex"]];
+        $root->removeChild($deleted_element);
+        $doc->save($fileName);
+        if ($_SESSION["myIndex"] > 0) {
+            $_SESSION["myIndex"] -= 1;
+        }
+    }
+    if ($_POST["action"] === "update") {
+        $root = $doc->documentElement;
+        $updated_element = $root->childNodes[$_SESSION["myIndex"]];
+        $updated_element->childNodes[1]->nodeValue = $_POST['name'];
+        $updated_element->childNodes[2]->nodeValue = $_POST['email'];
+        $updated_element->childNodes[3]->nodeValue = $_POST['phone'];
+        $updated_element->childNodes[4]->nodeValue = $_POST['address'];
+        $doc->save($fileName);
+    }
 }
-
-
 
 $index = $_SESSION["myIndex"];
 $employees = $doc->documentElement;
 $employee = $employees->childNodes[$index];
-$name = $employee->childNodes[0]->nodeValue;
-$email = $employee->childNodes[1]->nodeValue;
-$phone = $employee->childNodes[2]->nodeValue;
-$address = $employee->childNodes[3]->nodeValue;
+$name = $employee->childNodes[1]->nodeValue;  // id @index 0
+$email = $employee->childNodes[2]->nodeValue;
+$phone = $employee->childNodes[3]->nodeValue;
+$address = $employee->childNodes[4]->nodeValue;
+
+if ($clearFlag) {
+    $name = $email = $phone = $address = "";
+    $clearFlag = false;
+}
+
+
+
 
 require_once("views/view.php");

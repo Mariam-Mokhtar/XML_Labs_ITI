@@ -40,7 +40,7 @@
                 <input type="submit" class="btn btn-primary me-1 rounded-1" name="action" value="insert">
                 <input type="submit" class="btn btn-primary me-1 rounded-1" name="action" value="update">
                 <input type="submit" class="btn btn-primary me-1 rounded-1" name="action" value="delete">
-                <input type="submit" class="btn btn-primary me-1 rounded-1" name="action" value="save">
+                <input type="submit" class="btn btn-primary me-1 rounded-1" name="action" value="clear">
             </div>
         </form>
 
